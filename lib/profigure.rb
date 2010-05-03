@@ -3,6 +3,7 @@ require 'erb'
 
 require 'mostash'
 
+require File.join(File.dirname(__FILE__), "profigure", "hash_extensions")
 require File.join(File.dirname(__FILE__), "profigure", "profigure")
 
 def dbg( msg )
