@@ -1,0 +1,5 @@
+top_level:
+  second_level:
+    third_level:
+      bar: baz
+      time: now
