@@ -1,4 +1,4 @@
-class Profig
+class Profigure
   class << self
     def load(configs_dir, environment=nil)
       hash = YAML.load(file_contents("defaults", configs_dir))
