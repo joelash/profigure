@@ -36,6 +36,13 @@ describe "Profigure" do
     config.array[1].should == "two"
   end
 
+  it "should properly handle inline arrays" do
+    config = Profigure.load @config_dir, "arrays"
+
+    config.inline_array.size.should == 3
+    config.inline_array.last.should == "five"
+  end
+
   it "should allow overriding after load" do
     config = Profigure.load @config_dir, "test"
     config.foo = "bar"

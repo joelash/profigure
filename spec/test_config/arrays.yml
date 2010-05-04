@@ -1,1 +1,6 @@
-array: [one, two]
+array:
+  - one
+  - two
+
+inline_array: [three, four, five]
+
