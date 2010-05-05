@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "lib/profigure.rb",
      "lib/profigure/hash_extensions.rb",
      "lib/profigure/profigure.rb",
+     "profigure.gemspec",
      "spec/profigure_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
