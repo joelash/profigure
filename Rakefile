@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "profigure"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Replacing the cons with pros in configuration}
+    gem.description = %Q{profigure aims to be a drop in replacement for configuring your apps in a railsy way.}
     gem.email = "asher.friedman@gmail.com"
     gem.homepage = "http://github.com/joelash/profigure"
     gem.authors = ["Joel Friedman"]
