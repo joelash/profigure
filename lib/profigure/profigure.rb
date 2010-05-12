@@ -13,8 +13,12 @@ class Profigure
 
     def file_contents(environment, configs_dir)
       file = "#{configs_dir}/#{environment}.yml"
-      content = IO.read(file)
+      content = run_erb IO.read(file)
     end 
+
+    def run_erb(data)
+      ERB.new( data ).result
+    end
 
   end
 end

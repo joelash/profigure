@@ -55,4 +55,10 @@ describe "Profigure" do
 
     config[:foo].should == "bar"
   end
+
+  it "should allow template to contain erb" do
+    config = Profigure.load @config_dir, "erb"
+
+    config[:user].should == ENV["USER"]
+  end
 end
