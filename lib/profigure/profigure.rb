@@ -24,7 +24,7 @@ class Profigure
     end
 
     def load_referenced_config_from( configs_dir, config_hash )
-      config_like_file = config_hash["profigure_like"]
+      config_like_file = config_hash["profigure_like"] || config_hash[:profigure_like]
       return config_hash unless config_like_file
       config_like = file_contents( config_like_file, configs_dir )
       config_like.recursive_merge! config_hash
