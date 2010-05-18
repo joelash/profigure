@@ -1,0 +1,8 @@
+profigure_like: nested
+
+top_level:
+  second_level:
+    third_level:
+      bar: foo
+
+new_config: yes_i_am

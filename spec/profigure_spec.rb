@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Profigure" do
-  before do
+  before :all do
     @config_dir = File.join(File.dirname(__FILE__), "test_config")
   end
 
@@ -60,5 +60,28 @@ describe "Profigure" do
     config = Profigure.load @config_dir, "erb"
 
     config[:user].should == ENV["USER"]
+  end
+
+  context "profiguring like another yml" do
+    before :all do
+      @config = Profigure.load @config_dir, "like_nested"
+    end
+
+    it "should have the default settings" do
+      @config.foo.should == "bar"
+    end
+
+    it "should have settings it's file" do
+      @config.new_config.should == "yes_i_am"
+    end
+
+    it "should have settings from config referenced by 'profigure_like'" do
+      @config.marco.should == "polo"
+    end
+
+    it "should override configs from refrerenced with actual file" do
+      @config.top_level.second_level.third_level.bar.should == "foo"
+    end
+
   end
 end
