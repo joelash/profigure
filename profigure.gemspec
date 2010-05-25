@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Friedman"]
-  s.date = %q{2010-05-18}
+  s.date = %q{2010-05-25}
   s.description = %q{profigure aims to be a drop in replacement for configuring your apps in a railsy way.}
   s.email = %q{asher.friedman@gmail.com}
   s.extra_rdoc_files = [
@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
      "spec/spec_helper.rb",
      "spec/test_config/arrays.yml",
      "spec/test_config/defaults.yml",
+     "spec/test_config/empty.yml",
      "spec/test_config/erb.yml",
      "spec/test_config/like_nested.yml",
      "spec/test_config/nested.yml",
