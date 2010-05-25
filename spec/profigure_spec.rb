@@ -23,6 +23,10 @@ describe "Profigure" do
     config.foo.should == "overridden"
   end
 
+  it "should not die if file is empty" do
+    lambda { Profigure.load @config_dir, "empty" }.should_not raise_error
+  end
+
   it "should properly handle nested hashes" do
     config = Profigure.load @config_dir, "nested"
 

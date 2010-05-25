@@ -16,7 +16,7 @@ class Profigure
     def file_contents(environment, configs_dir)
       file = "#{configs_dir}/#{environment}.yml"
       content = run_erb IO.read(file)
-      YAML.load content
+      YAML.load( content ) || {}
     end 
 
     def run_erb(data)
